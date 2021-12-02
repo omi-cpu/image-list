@@ -6,13 +6,11 @@ class SearchInput extends React.Component{
         super(props)
         this.state={entry: ''}
 
-
-        //this.onFormSubmit = this.onFormSubmit.bind(this)
     }
 
     onFormSubmit = (event) => {
         event.preventDefault(); //this prevent the page from reloading after submitting the form
-        console.log(this.state.entry);
+        this.props.onSearchSubmit(this.state.entry)
     }
 
     render(){
